@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Design</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+/>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+    max-width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    font-size: 1.5rem;
+    padding: 2rem;
+    width: 33.33%;
+    text-align: center;
+}
+
+.col img {
+    max-width: 100%;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container::after {
+    content: "\f04b";
+    border: 20px solid white;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 0;
+    height: 0;
+    z-index: 10;
+}
+
+nav {
+    border-bottom: 5px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo i {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #fff;
+    border: 0;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+}
+
+.green {
+    color: #00d69f;
+}
+
+.red {
+    color: #e75050;
+}
+
+.orange {
+    color: #d27752;
+}
+
+@media screen and (max-width: 768px) {
+    nav button {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .col {
+        width: 100%;
+    }
+}
+</style>
+<body>
+    <div class="container">
+            <nav>
+                <button>View All</button>
+                <div class="logo">
+                    <i class="fas fa-play"></i>
+                    Group # 10
+                </div>
+                <button>Subscribe</button>
+            </nav>
+            <main>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="img-container">
+                            
+                                <a href="https://www.youtube.com/watch?v=8kDfzk4z_hE" target="_blank">
+                                <img
+                                    src="themeg.jpg"
+                                    alt="img-1"
+                                    class="play"
+                                /></a>
+                            </div>
+                            <h2>The Meg trailer</h2>
+                            <p class="green">
+                                A great movie about a megladon Shark
+                            </p>
+                            
+                            <a href="https://www.youtube.com/embed/udm5jUA-2bs">Watch Now</a>
+                            
+                            
+                        </div>
+                        <div class="col">
+                            <div class="img-container">
+                                <a href="https://www.youtube.com/embed/g-BlaK7y5lQ" target="_blank">
+                                     <img
+                                    src="car.jpg"
+                                    
+                                    alt="img-2"
+                                    class="play"
+                                /></a>
+                            </div>
+                            <h2>Fast and Furious</h2>
+                            <p class="red">
+                                An extremely thrilling race
+                            </p>
+                            <a href="https://www.youtube.com/embed/g-BlaK7y5lQ">Watch Now</a>
+                        </div>
+                        <div class="col">
+                            <div class="img-container">
+                               <a href="https://www.youtube.com/embed/5guMumPFBag" target="_blank"> 
+                               <img
+                                    src="pr.jpg"
+                                    alt="img-3"
+                                    class="play"
+                                /></a> 
+                            </div>
+                            <h2>Pacific Rim</h2>
+                            <p class="orange">
+                                Pacific rim is a sci-fi movie about Humanoid robots
+                            </p>
+                            <a href="https://www.youtube.com/embed/5guMumPFBag">Watch Now</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+</body>
+</html>
